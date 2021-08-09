@@ -1,0 +1,14 @@
+_BASE_: "../Base-RCNN-PAFPN.yaml"
+MODEL:
+  WEIGHTS: ""
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  IMS_PER_BATCH: 8
+DATASETS:
+  TRAIN: ("coco_2017_train",)
+  TEST: ("coco_2017_val",)
+TEST:
+  AUG:
+    ENABLED: False

@@ -1,0 +1,15 @@
+_BASE_: "../Base-FCOS.yaml"
+MODEL:
+  WEIGHTS: ""
+  BACKBONE:
+    NAME: "build_fcos_resnet_fpn_sr_backbone"
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  IMS_PER_BATCH: 8
+DATASETS:
+  TRAIN: ("coco_2017_train",)
+  TEST: ("coco_2017_val",)
+TEST:
+  AUG:
+    ENABLED: False
